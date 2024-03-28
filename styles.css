@@ -12,21 +12,29 @@ body {
 header {
   background-color: #fff; /* Barra superior em branco */
   color: #333; /* Texto escuro */
-  height: 40px;
-  padding: 20px;
+  padding: 10px 30px; /* Reduzindo o preenchimento para tornar a barra mais fina */
   display: flex;
   justify-content: space-between; /* Colocar elementos nas extremidades */
   align-items: center; /* Centralizar verticalmente */
+  position: fixed; /* Tornando a barra fixa */
+  top: 0; /* Fixando no topo */
+  width: 100%; /* Cobrindo toda a largura */
+  z-index: 1000; /* Garantindo que a barra esteja acima de outros conteúdos */
 }
 
 .logo img {
-  width: 40px; /* Ajuste conforme necessário */
+  width: 150px; /* Ajuste conforme necessário */
   height: auto; /* Para manter a proporção */
+}
+
+.ticket {
+  margin-right: 20px; /* Margem à direita para separação */
 }
 
 .ticket a {
   color: #333; /* Texto escuro */
   text-decoration: none;
+  margin-right: 18px;
 }
 
 .ticket a:hover {
@@ -34,7 +42,7 @@ header {
 }
 
 .ticket i {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .header-content {
@@ -46,19 +54,16 @@ header {
   margin-right: 10px;
 }
 
-.logo img {
-  width: 150px; /* Ajuste conforme necessário */
-  height: auto; /* Para manter a proporção */
-}
-
 header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 24px; /* Tamanho da fonte do título */
 }
 
 main {
-  padding: 20px;
+  padding-top: 60px; /* Ajustando o preenchimento para evitar sobreposição com a barra fixa */
 }
+
+
 
 .dock {
   display: flex;
