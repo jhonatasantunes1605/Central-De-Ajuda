@@ -12,6 +12,7 @@ body {
 header {
   background-color: #fff; /* Barra superior em branco */
   color: #333; /* Texto escuro */
+  height: 70px; /* Para manter a proporção */
   padding: 20px;
   display: flex;
   justify-content: space-between; /* Colocar elementos nas extremidades */
