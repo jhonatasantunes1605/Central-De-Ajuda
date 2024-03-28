@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Ajuda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./icons/Pngtreequestion_mark_sign_flat_design_5688049.png" type="image/x-icon">
+
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="./icons/logo-topo-manager.png" alt="Logo">
+      </div>
+      <h1>Central de Ajuda</h1>
+    </div>
+    <div class="ticket">
+      <a href="https://www.terabyteshop.com.br/FaleConosco.obj" target="_blank">
+        <i class="fas fa-ticket-alt"></i> Abrir um Ticket
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Conteúdo principal aqui -->
+    <div class="legenda">
+      <h2>Qual o seu problema?</h2>
+      <p>Selecione um dos componentes abaixo para ver os problemas relacionados e suas soluções.</p>
+    </div>
+
+    <div class="dock-container">
+      <div class="dock">
+        <a href="#" onclick="showComponent('fonte')" id="fonte">
+          <img src="./icons/fonte.png" alt="Fonte">
+          <span class="tooltip">Fonte</span>
+        </a>
+        <a href="#" onclick="showComponent('placaMae')"  id="placaMae">
+          <img src="./icons/icons8-placa-mae-96.png" alt="Placa-Mãe">
+          <span class="tooltip">Placa-Mãe</span>
+        </a>
+        <a href="#" onclick="showComponent('processador')" id="processador">
+          <img src="./icons/cpu.png" alt="Processador">
+          <span class="tooltip">Processador</span>
+        </a>
+        <a href="#" onclick="showComponent('placaVideo')"  id="placaVideo">
+          <img src="./icons/icons8-video-card-94.png" alt="Placa de Vídeo">
+          <span class="tooltip">Placa de Vídeo</span>
+        </a>
+        <a href="#" onclick="showComponent('gabinete')"  id="gabinete">
+          <img src="./icons/gabinete.png" alt="Gabinete">
+          <span class="tooltip">Gabinete</span>
+        </a>
+        <a href="#" onclick="showComponent('memoria')"  id="memoria">
+          <img src="./icons/ram.png" alt="Memória">
+          <span class="tooltip">Memória</span>
+        </a>
+        <a href="#" onclick="showComponent('ssd')"  id="ssd">
+          <img src="./icons/ssd.png" alt="SSD">
+          <span class="tooltip">SSD/HD</span>
+        </a>
+        <a href="#" onclick="showComponent('rgb')"  id="rgb">
+          <img src="./icons/rgb.png" alt="RGB">
+          <span class="tooltip">RGB</span>
+        </a>
+        <a href="#" onclick="showComponent('pccompleto')"  id="pccompleto">
+          <img src="./icons/pccompleto.png" alt="PC Completo">
+          <span class="tooltip">PC Completo</span>
+        </a>
+        <a href="#" onclick="showComponent('refrigeracao')"  id="refrigeracao">
+          <img src="./icons/refrigeracao.png" alt="Refrigeração">
+          <span class="tooltip">Refrigeração</span>
+        </a>
+      </div>
+
+      <div id="problemas" class="problemas-menu" style="display: none;">
+        <h2>Problemas</h2>
+        <div class="problemas-lista">
+          <!-- Aqui será preenchido com os problemas do componente selecionado -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Função para mostrar os problemas do componente selecionado
+    function showComponent(componente) {
+      // Lista de problemas fictícios apenas para demonstração
+      const problemas = {
+        fonte: [
+          { problema: "Fonte queimada", solucao: "Substituir a fonte por uma nova." },
+          { problema: "Ruído excessivo", solucao: "Verificar se há poeira acumulada na fonte e limpar." },
+          { problema: "PC não liga", solucao: "Verificar se a fonte está corretamente conectada à placa-mãe e aos demais componentes." }
+        ],
+        placaMae: [
+          { problema: "Sem vídeo", solucao: "Verificar se o cabo de vídeo está corretamente conectado à placa de vídeo e ao monitor." },
+          { problema: "Erro de BIOS", solucao: "Restaurar as configurações padrão da BIOS ou atualizá-la." },
+          { problema: "Portas USB não funcionam", solucao: "Verificar se os drivers estão instalados corretamente e se as portas USB estão ativadas na BIOS." }
+        ],
+        processador: [
+          { problema: "Sem post", solucao: "Verificar se o processador está corretamente encaixado no soquete da placa-mãe e se o cooler está funcionando." }
+        ],
+        // Adicione os problemas para os outros componentes aqui
+      };
+
+      const listaProblemas = document.querySelector(".problemas-lista");
+      listaProblemas.innerHTML = ""; // Limpa a lista de problemas anteriores
+
+      // Remover a classe de destaque de todos os ícones
+      const icons = document.querySelectorAll('.dock a');
+      icons.forEach(icon => {
+        icon.classList.remove('destacado');
+      });
+
+      // Adicionar classe de destaque ao ícone clicado
+      const iconClicado = document.getElementById(componente);
+      iconClicado.classList.add('destacado');
+
+      if (problemas[componente]) {
+        problemas[componente].forEach(item => {
+          const card = document.createElement("div");
+          card.classList.add("problemas-item");
+          card.innerHTML = `
+            <h3>${item.problema}</h3>
+            <p>${item.solucao}</p>
+          `;
+          listaProblemas.appendChild(card);
+        });
+        document.getElementById("problemas").style.display = "block";
+      } else {
+        document.getElementById("problemas").style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
