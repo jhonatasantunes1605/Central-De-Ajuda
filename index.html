@@ -90,24 +90,27 @@
       const problemas = {
         fonte: [
           { 
-            problema: "Fonte queimada", 
+            problema: "Fonte não Liga", 
             solucoes: [
-              "Substituir a fonte por uma nova.",
-              "Verificar se há curto-circuito em outros componentes."
+              "É necessário que a fonte esteja com o conector 24 pinos ligado a uma placa mãe ou jumpeado, para que a fonte apresente algum sinal de funcionamento.",
+              "Verificar se a fonte possui PFC Ativo, caso contrario verificar o seletor de tensão e ajustar para sua região.",
+              "Verificar se o botão power da fonte se encontra na posição "I", caso esteja como "O", a fonte está desligada."
             ]
           },
           { 
-            problema: "Ruído excessivo", 
+            problema: "Ruído", 
             solucoes: [
-              "Verificar se há poeira acumulada na fonte e limpar.",
-              "Substituir o ventilador da fonte se estiver danificado."
+              "Verificar se há sujeira ou alguma obstrução na parte interna da fonte, algo pode estar encostando na ventoinha da fonte.",
+              "Coil whine, ruido elétrico aceitavel, podendo não caracterizar defeito."
             ]
           },
           { 
-            problema: "PC não liga", 
+            problema: "Fonte desligando", 
             solucoes: [
-              "Verificar se a fonte está corretamente conectada à placa-mãe e aos demais componentes.",
-              "Testar a fonte em outro computador para verificar se está funcionando."
+              "Verificar se a fonte utilizada suporta o hardware instalado em seu computador.",
+              "Componentes em curto, como coolers para gabinete, ssd ou dispositivos RGB."
+              "Cabos rompidos ou derretidos."
+
             ]
           }
         ],
