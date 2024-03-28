@@ -119,9 +119,9 @@ main {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  color: #2b2b2b;
-  font-size: 14px;
-  margin: 0;
+   color: #545151;
+   font-size: 14px;
+   margin: 0;
 }
 
 .problemas-item:hover {
