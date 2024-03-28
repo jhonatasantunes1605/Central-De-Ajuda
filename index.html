@@ -152,7 +152,11 @@
         document.getElementById("problemas").style.display = "block";
       } else {
         document.getElementById("problemas").style.display = "none";
-      }
+    }
+  // Rolar até a seção de problemas
+      const problemasSection = document.getElementById("problemas");
+      problemasSection.style.display = "block";
+      problemasSection.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
