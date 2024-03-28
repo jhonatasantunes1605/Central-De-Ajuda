@@ -92,34 +92,43 @@
           { 
             problema: "Fonte não Liga", 
             solucoes: [
-              "É necessário que a fonte esteja com o conector 24 pinos ligado a uma placa mãe ou jumpeado, para que a fonte apresente algum sinal de funcionamento.",
-              "Verificar se a fonte possui PFC Ativo, caso contrario verificar o seletor de tensão e ajustar para sua região.",
-              "Verificar se o botão power da fonte se encontra na posição 'I', caso esteja como 'O', a fonte está desligada."
+              "É necessário que a fonte esteja com o conector de 24 pinos ligado à placa-mãe ou jumpeado, para que a fonte apresente algum sinal de funcionamento.",
+              "Verifique se a fonte possui PFC Ativo. Caso contrário, verifique o seletor de tensão e ajuste para a sua região.",
+              "Verifique se o botão power da fonte está na posição "I". Caso esteja na posição "O", significa que a fonte está desligada."
             ]
           },
           { 
             problema: "Ruído", 
             solucoes: [
-              "Verificar se há sujeira ou alguma obstrução na parte interna da fonte, algo pode estar encostando na ventoinha da fonte.",
-              "Coil whine, ruido elétrico aceitavel, podendo não caracterizar defeito."
+              "Verifique se há sujeira ou alguma obstrução na parte interna da fonte. Algo pode estar obstruindo ou encostando na ventoinha da fonte.",
+              "Coil whine, um ruído elétrico, pode ser considerado normal e não necessariamente indica um defeito."
             ]
           },
           { 
             problema: "Fonte desligando", 
             solucoes: [
-              "Verificar se a fonte utilizada suporta o hardware instalado em seu computador.",
-              "Componentes em curto, como coolers para gabinete, ssd ou dispositivos RGB.",
-              "Cabos rompidos ou derretidos."
+              "Verifique se a fonte utilizada é compatível com o hardware instalado em seu computador.",
+              "Verifique se há componentes em curto, como coolers de gabinete, SSDs ou dispositivos RGB.",
+              "Verifique se há cabos rompidos ou derretidos."
 
             ]
           }
         ],
         placaMae: [
           { 
-            problema: "Sem vídeo", 
+            problema: "Não liga", 
             solucoes: [
-              "Verificar se o cabo de vídeo está corretamente conectado à placa de vídeo e ao monitor.",
-              "Testar com outra placa de vídeo para descartar problemas de hardware."
+              "Verifique se todos os cabos de alimentação estão corretamente conectados à placa-mãe.",
+              "É necessário ter um processador instalado na placa para que ela apresente sinal de funcionamento.",
+              "Caso seja possível, teste com outra fonte de alimentação."
+            ]
+          },
+	{ 
+            problema: "Liga mas não apresenta imagem", 
+            solucoes: [
+              "Verifique se o seu processador possui gráfico integrado. Caso não possua, será necessário o uso de uma placa de vídeo. Lembre-se de que, ao utilizar uma placa de vídeo, o cabo HDMI, VGA ou DisplayPort precisa estar conectado à sua placa de vídeo.",
+            "Se possuir duas unidades ou mais de memória RAM, teste sua placa com uma memória por vez. Pode haver um pente com defeito.",
+            "Se estiver disponivel utilize um speaker, anote a sequencia de beeps e podera fazer uma busca rápida para identificar o defeito, placas mais modernas possuem o recurso do debug led, são pequenos indicadores luminosos. Eles acendem para mostrar o status do hardware e ajudar a identificar possíveis problemas durante a montagem ou funcionamento do computado."
             ]
           },
           // Outros problemas e soluções aqui
