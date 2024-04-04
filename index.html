@@ -128,7 +128,60 @@
             solucoes: [
               "Verifique se o seu processador possui gráfico integrado. Caso não possua, será necessário o uso de uma placa de vídeo. Lembre-se de que, ao utilizar uma placa de vídeo, o cabo HDMI, VGA ou DisplayPort precisa estar conectado à sua placa de vídeo.",
             "Se possuir duas unidades ou mais de memória RAM, teste sua placa com uma memória por vez. Pode haver um pente com defeito.",
-            "Se estiver disponivel utilize um speaker, anote a sequencia de beeps e podera fazer uma busca rápida para identificar o defeito, placas mais modernas possuem o recurso do debug led, são pequenos indicadores luminosos. Eles acendem para mostrar o status do hardware e ajudar a identificar possíveis problemas durante a montagem ou funcionamento do computador."
+            "Se estiver disponivel utilize um speaker, anote a sequencia de beeps e podera fazer uma busca rápida para identificar o defeito, placas mais modernas possuem o recurso do debug led, são pequenos indicadores luminosos. Eles acendem para mostrar o status do hardware e ajudar a identificar possíveis problemas durante a montagem ou funcionamento do computado."
+            ]
+          },
+        ],
+        placadevideo: [
+      {
+problema: "Não da Vídeo", 
+            solucoes: [
+              "Verifique se o cabo HDMI, DisplayPort ou VGA está conectado à placa de vídeo e não à placa mãe.",
+              "Verifique se o cabo PCIe da fonte está conectado à sua placa de vídeo, caso ela possua, e também se a quantidade de cabos está correta.",
+              "Verifique se a placa está devidamente instalada no PCIe da sua Placa Mãe.",
+"Certifique-se de que na BIOS da placa mãe está habilitado o vídeo onboard."            ]
+          },
+	{ 
+            problema: "Perdendo Vídeo", 
+            solucoes: [
+              "Realize uma limpeza de drivers antigos. Recomendamos o uso do software DDU e a instalação do driver mais recente, utilizando o driver correto para o seu modelo de placa.",
+"Verifique o cabo utilizado; o mesmo pode estar com defeito ou ser incompatível. Faça a substituição, se necessário.",
+"Verifique se sua fonte tem capacidade para alimentar sua placa de vídeo e, se disponível, realize o teste com outra fonte de alimentação.",
+"Não é recomendado o uso de adaptadores. Se estiver utilizando algum, por exemplo, de HDMI para DisplayPort ou VGA para HDMI, tente removê-lo e utilize um cabo recomendado."
+
+ },
+	{ 
+            problema: "Distorções visuais", 
+            solucoes: [
+              "Verifique o cabo utilizado e, se possível, utilize outro para testes, alternando entre todas as portas da placa. Se estiver utilizando HDMI, tente usar um cabo DisplayPort.",
+
+"Realize uma limpeza de drivers antigos. Recomendamos o uso do software DDU e a instalação do driver mais recente, utilizando o driver correto para o seu modelo de placa.",
+
+"Caso o problema persista, este pode ser um defeito comum conhecido como artefato. Recomendamos que entre em contato com a loja e solicite assistência técnica para acionar a garantia."
+},
+	{ 
+            problema: "Super-aquecimento", 
+            solucoes: [
+              "Verifique se as ventoinhas da placa não estão sendo bloqueadas por algum cabo ou objeto.",
+
+"Verifique se não há muita poeira ou sujeira em sua placa.",
+
+"Realize uma limpeza de drivers antigos. Recomendamos o uso do software DDU e a instalação do driver mais recente, utilizando o driver correto para o seu modelo de placa.",
+
+"Analise o fluxo de ar do seu gabinete; outros hardwares podem estar muito aquecidos, impactando diretamente na temperatura da sua placa."
+},
+	{ 
+            problema: "Ruido", 
+            solucoes: [
+ "Verifique se as ventoinhas da placa não estão entrando em contato com algum cabo ou objeto.",
+
+"Verifique a temperatura da sua placa. Caso esteja muito alta, as ventoinhas irão operar em velocidade máxima, o que resultará em um ruído mais alto.",
+
+"Verifique se não há muita poeira ou sujeira acumulada em sua placa.",
+
+"Realize uma limpeza de drivers antigos. Recomendamos o uso do software DDU e a instalação do driver mais recente, utilizando o driver correto para o seu modelo de placa.",
+
+"Caso seja um ruído elétrico, pode ser coil whine, algo comum e, dependendo da intensidade, não caracteriza defeito."
             ]
           },
           // Outros problemas e soluções aqui
