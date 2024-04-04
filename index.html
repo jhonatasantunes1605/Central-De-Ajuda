@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2>🔧 Auto Ajuda Técnica: Resolução Rápida e Eficiente</h2>
+      <p>Cerca de 80% dos casos são solucionados utilizando esta ferramenta intuitiva.</p>
+      <p>Para identificar qual componente do hardware está enfrentando problemas, basta clicar no ícone correspondente abaixo. Logo após, você terá acesso a uma série de cartões com possíveis problemas e tópicos contendo soluções detalhadas. Pedimos que leia com atenção cada uma das opções disponíveis e, caso necessário, aplique as soluções sugeridas em sua peça.</p>
+      <button onclick="fecharModal()">OK</button>
+    </div>
+  </div>
+
   <header>
     <div class="header-content">
       <div class="logo">
@@ -24,11 +35,11 @@
   </header>
 
   <main>
-    <!-- Conteúdo principal aqui -->
     <div class="legenda">
       <h2>Qual o seu problema?</h2>
       <p>Selecione um dos componentes abaixo para ver os problemas relacionados e suas soluções.</p>
     </div>
+
 
     <div class="dock-container">
       <div class="dock">
@@ -215,6 +226,13 @@
       problemasSection.style.display = "block";
       problemasSection.scrollIntoView({ behavior: 'smooth' });
     }
+  function fecharModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onload = function() {
+      document.getElementById('modal').style.display = 'block';
+    };
   </script>
 </body>
 </html>
