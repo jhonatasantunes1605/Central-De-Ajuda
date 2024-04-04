@@ -242,3 +242,41 @@ main {
     .modal-content button:hover {
       background-color: #45a049;
     }
+    @media screen and (max-width: 768px) {
+  header {
+    padding: 10px 15px; /* Reduzindo o preenchimento para tornar a barra mais fina */
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 100px; /* Ajuste conforme necessário */
+  }
+
+  header h1 {
+    margin-top: 10px; /* Adicionando espaço entre o logo e o título */
+    font-size: 20px; /* Tamanho da fonte do título */
+  }
+
+  .ticket {
+    margin-top: 10px; /* Adicionando espaço entre o título e o botão do ticket */
+  }
+
+  .ticket a {
+    font-size: 14px; /* Tamanho da fonte do botão do ticket */
+  }
+@media screen and (max-width: 1024px) {
+  .dock a {
+    width: 80px; /* Diminuindo o tamanho dos ícones */
+    height: 80px;
+    margin: 5px; /* Reduzindo a margem entre os ícones */
+  }
+
+  .dock img {
+    width: 50px; /* Diminuindo o tamanho das imagens dos ícones */
+    height: 50px;
+  }
+}
